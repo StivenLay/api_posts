@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "65521480-36dc-4dee-9ed1-0c589d4d067c",
+		"name": "Article Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    // {\r\n    //     \"Title\": \"testitle\",\r\n    //     \"Content\":\"contentas\",\r\n    //     \"Category\":\"tes\",\r\n    //     \"Status\":\"Draft\"\r\n    // }\r\n{\r\n    \"nama_kategori\":\"asdasd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/article/<limit>/<offset>",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/article/<id>",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/article/<id>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"Title\": \"tile more than 20 characters\",\r\n        \"Content\": \"tile more than 20 characterstile more than 20 characterstile more than 20 characterstile more than 20 characterstile mortile more than 20 characterstile more than 20 characterse than 20 characterstile more than 20 characters\",\r\n        \"Category\": \"asdasd\",\r\n        \"Status\": \"draft\",\r\n        \"id\": 5\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/article/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"article",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/article<id>",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/article/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"article",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
